@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="container">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 303">
+            <defs>
+                <style>.cls-1{fill:#fff;stroke:#000;stroke-miterlimit:10;}</style>
+            </defs>
+            <title>shape</title>
+            <polygon class="cls-1 polygon1" id ="hello" points="50.51 2 0.08 146 104.92 146 50.51 2"/>
+            <polygon class="cls-1" points="50.51 303.5 0.08 159.5 104.92 159.5 50.51 303.5"/>
+            <circle class="cls-1" cx="52.5" cy="151.5" r="31"/>
+        </svg>  
+    </div> -->
+
+<!-- 
+     <div class="container2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 789.17 774">
+        <title>cake-menu</title>
+        <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+                <path id="bg-circle" d="M787.17,382.17l-13.61-13.61C763.94,163.39,594.55,0,387,0,173.27,0,0,173.27,0,387S173.27,774,387,774c207.55,0,376.94-163.39,386.56-368.56l13.61-13.61A6.83,6.83,0,0,0,787.17,382.17Z" style="fill:#fff"/>
+                <path id="top-slice" d="M652.16,121.84,387,387,121.84,121.84C268.28-24.61,505.72-24.61,652.16,121.84Z" style="fill:#fff7f5"/>
+                <path id="right-slice" d="M652.16,652.16,387,387,652.16,121.84C798.61,268.28,798.61,505.72,652.16,652.16Z" style="fill:#fff5f9"/>
+                <path id="bottom-slice" class="bot" d="M652.16,652.16c-146.44,146.45-383.88,146.45-530.32,0L387,387Z" style="fill:#f9f3ff"/>
+                <path id="left-slice" d="M387,387,121.84,652.16c-146.45-146.44-146.45-383.88,0-530.32Z" style="fill:#fffef8"/>
+                <circle id="ceenter-ellipse" cx="387" cy="387" r="151.5" style="fill:#f5faff;stroke:#fffdfe;stroke-miterlimit:10"/>
+            </g>
+        </g>
+    </svg>    
+</div>  -->
+
+
+<div class="container">
+    <svg id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 789.17 774">
+        <title>cake-menu</title>
+    
+        
+   
+        <path id="top-slice" onclick ="clickUp()" d="M652.16,121.84,387,387,121.84,121.84C268.28-24.61,505.72-24.61,652.16,121.84Z"/>
+        <path id="right-slice" onclick ="clickRight()" d="M652.16,652.16,387,387,652.16,121.84C798.61,268.28,798.61,505.72,652.16,652.16Z" />
+        <path id="bottom-slice" onclick ="clickDown()" d="M652.16,652.16c-146.44,146.45-383.88,146.45-530.32,0L387,387Z"  />
+        <path id="left-slice" onclick ="clickLeft()" d="M387,387,121.84,652.16c-146.45-146.44-146.45-383.88,0-530.32Z" />
+        <circle id="center-ellipse" onclick ="clickCenter()" cx="387" cy="387" r="151.5"  />
+    
+    </svg>
+
+
+</div>
+
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    Popover on top
+  </button>
+  
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+     <script>
+        /* var t1 = gsap.timeline({
+             paused:true,
+             default: { duration : .7,
+             ease: Back.easeOut.config(2),
+             opacity: 0}
+         })
+
+         t1.to(".polygon1", {
+             fill: "#FF0000",
+             transformOrigin: 'center'
+         }, "=.2")*/
+
+
+         
+        /* document.querySelector(".bot").addEventListener("mouseover",doCool);
+         document.querySelector(".bot").addEventListener("mouseleave",leave);
+
+         function doCool(){
+             document.getElementById("hello").style.fill = "lightblue";
+         }
+
+         function leave(){
+            document.getElementById("hello").style.fill = "white";
+         }*/
+
+         const el = document.querySelector('#menu')
+        /*
+        Array.from(el.children).forEach((child, i) => {
+        if (child.nodeName === 'title') return
+
+        child.addEventListener('mouseenter', () => {
+            child.style.fill = 'red'
+        })
+        child.addEventListener('mouseleave', () => {
+            child.style.fill = "black"
+        })
+        })
+        */
+
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
+
+       
+        function clickLeft(){
+            console.log('Hello left is clicked');
+            var elem = document.createElement("H1");
+            elem.innerHTML = "This is LEFT";
+            document.body.appendChild(elem);
+        }
+
+        function clickRight(){
+            console.log('Hello left is clicked');
+            var elem = document.createElement("H1");
+            elem.innerHTML = "This is Right";
+            document.body.appendChild(elem);
+        }
+
+
+        function clickUp(){
+            console.log('Hello left is clicked');
+            var elem = document.createElement("H1");
+            elem.innerHTML = "This is Up";
+            document.body.appendChild(elem);
+        }
+
+
+        function clickDown(){
+            console.log('Hello left is clicked');
+            var elem = document.createElement("H1");
+            elem.innerHTML = "This is Down";
+            document.body.appendChild(elem);
+        }
+
+        function clickCenter(){
+            console.log('Hello Center is clicked');
+            var elem = document.createElement("H1");
+            elem.innerHTML = "This is Center";
+            document.body.appendChild(elem);
+        }
+
+
+
+
+     </script>
+</body>
+</html>
