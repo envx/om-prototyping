@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 
 body {
     font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 svg {
@@ -75,4 +77,19 @@ svg {
 
 #center-ellipse {
     fill: rgb(175, 175, 175);
+}
+
+.info-msg {
+    position: absolute;
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 3px 3px 3px 3px;
+  color: rgb(92, 92, 92);
+  background-color: rgb(229, 231, 233);
+  display: inline-block;
+}
+
+
+.fa {
+    margin-right: 8px;
 }

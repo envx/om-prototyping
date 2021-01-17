@@ -1,82 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
 
-    <title>Document</title>
+    <title>Prototype menu cake</title>
 </head>
+
 <body>
-    
-<div class="container">
-    <svg id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 789.17 774">
-        <title>cake-menu</title>
-        <path id="top-slice" onclick ="clickUp()" d="M652.16,121.84,387,387,121.84,121.84C268.28-24.61,505.72-24.61,652.16,121.84Z"/>
-        <path id="right-slice" onclick ="clickRight()" d="M652.16,652.16,387,387,652.16,121.84C798.61,268.28,798.61,505.72,652.16,652.16Z" />
-        <path id="bottom-slice" onclick ="clickDown()" d="M652.16,652.16c-146.44,146.45-383.88,146.45-530.32,0L387,387Z"  />
-        <path id="left-slice" onclick ="clickLeft()" d="M387,387,121.84,652.16c-146.45-146.44-146.45-383.88,0-530.32Z" />
-        <circle id="center-ellipse" onclick ="clickCenter()" cx="387" cy="387" r="151.5"  />
-    
-    </svg>
+    <div class="info-msg">
+        <i class="fa fa-info-circle"></i>
+        Ceci est un prototype
+    </div>
 
-    <h1 id = "demo"></h1>
+    <div class="container">
+        <svg id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 789.17 774">
+            <title>cake-menu</title>
+            <path id="top-slice" onclick="clickUp()"
+                d="M652.16,121.84,387,387,121.84,121.84C268.28-24.61,505.72-24.61,652.16,121.84Z" />
+            <path id="right-slice" onclick="clickRight()"
+                d="M652.16,652.16,387,387,652.16,121.84C798.61,268.28,798.61,505.72,652.16,652.16Z" />
+            <path id="bottom-slice" onclick="clickDown()"
+                d="M652.16,652.16c-146.44,146.45-383.88,146.45-530.32,0L387,387Z" />
+            <path id="left-slice" onclick="clickLeft()"
+                d="M387,387,121.84,652.16c-146.45-146.44-146.45-383.88,0-530.32Z" />
+            <circle id="center-ellipse" onclick="clickCenter()" cx="387" cy="387" r="151.5" />
 
-</div>
-  
-     
-     <script>
-         const el = document.querySelector('#menu')
-         var state = "";
+        </svg>
 
-            function clickLeft(){
-         /* console.log('Hello left is clicked');
-            var elem = document.createElement("H1");
-            state = "This is left"
-            elem.innerHTML = state;
-            document.body.appendChild(elem);*/
-            document.getElementById("demo").innerHTML = "Left!";
-        }
+        <h1 id="demo"></h1>
 
-        function clickRight(elem){
-         /* console.log('Hello left is clicked');
-            var elem = document.createElement("H1");
-            state ="this is right"
-            elem.innerHTML = state;
-            document.body.appendChild(elem);*/
-            document.getElementById("demo").innerHTML = "Right!";
-        }
+    </div>
 
 
-        function clickUp(){
-        /*  console.log('Hello left is clicked');
-            var elem = document.createElement("H1");
-            elem.innerHTML = "This is Up";
-            document.body.appendChild(elem);*/
-            document.getElementById("demo").innerHTML = "Up!";
+    <script>
+       
+        const updateText = str => document.getElementById("demo").innerHTML = str
 
-        }
+        const clickLeft = () => updateText("<i class='fa fa-arrow-circle-left'></i> Left!")
+        const clickRight = () => updateText("<i class='fa fa-arrow-circle-right'></i> Right!")
+        const clickUp = () => updateText("<i class='fa fa-arrow-circle-up'></i> Up!")
+        const clickDown = () => updateText("<i class='fa fa-arrow-circle-down'></i> Down!")
+        const clickCenter = () => updateText("<i class='fa fa-circle'></i> Center!")
 
-
-        function clickDown(){
-        /*  console.log('Hello left is clicked');
-            var elem = document.createElement("H1");
-            elem.innerHTML = "This is Down";
-            document.body.appendChild(elem);*/
-            document.getElementById("demo").innerHTML = "Down!";
-        }
-
-        function clickCenter(){
-        /*  console.log('Hello Center is clicked');
-            var elem = document.createElement("H1");
-            elem.innerHTML = "This is Center";
-            document.body.appendChild(elem);*/
-            document.getElementById("demo").innerHTML = "Center!";
-        }
-
-
-
-
-     </script>
+        setTimeout(() => { document.querySelector('.info-msg').remove() }, 7000)
+        
+    </script>
 </body>
+
 </html>
